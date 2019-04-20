@@ -1,4 +1,4 @@
 require 'drb'
 
-DRb.start_service('druby://localhost:54321', SizedQueue.new(1))
+DRb.start_service('druby://localhost:54321', {queue: SizedQueue.new(1), hoge: })
 sleep
